@@ -1,0 +1,28 @@
+{
+  "name": "databases",
+  "version": "1.1.0",
+  "description": "Learn about databases",
+  "author": "Hack Reactor <curriculum.team@hackreactor.com>",
+  "license": "UNLICENSED",
+  "private": true,
+  "engines": {
+    "node": "8"
+  },
+  "scripts": {
+    "start": "node server/index.js",
+    "test": "mocha server/test",
+    "lint": "eslint ./"
+  },
+  "dependencies": {
+    "axios": "^0.19.0",
+    "body-parser": "^1.9.2",
+    "express": "^4.10.1",
+    "morgan": "^1.4.1",
+    "mysql2": "^1.6.5"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor",
+    "mocha": "^2.4.5"
+  }
+}

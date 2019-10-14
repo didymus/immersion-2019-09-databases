@@ -4,7 +4,20 @@ USE chat;
 
 
 CREATE TABLE messages (
-  // Describe your table here.
+  id INT NOT NULL AUTO_INCREMENT,
+  username VARCHAR(40) NOT NULL,
+  roomname VARCHAR(40),
+  PRIMARY KEY (id)
+);
+
+CREATE TABLE messages (
+  id INT NOT AUTO_INCREMENT,
+  text VARCHAR(120) NOT NULL,
+  roomname VARCHAR(40) NOT NULL,
+  username VARCHAR(40),
+  userId INT,
+  PRIMARY KEY (id),
+  FOREIGN KEY (userId) REFERENCES users(id)
 );
 
 /*  Execute this file from the command line by typing:

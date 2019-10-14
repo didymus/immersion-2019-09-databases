@@ -4,7 +4,7 @@ const { db } = require('../db');
 
 module.exports = {
   users: {
-    get: (callback) => {
+    getUser: (callback) => {
       const qs = 'select text, roomname from messages';
       db.query(queryString, (err, results) => {
         if(err){
@@ -16,7 +16,7 @@ module.exports = {
       res.end();
     },
 
-    post: (user) => {
+    postUsers: (user) => {
       //console.log(user);
       const text = message.message.replace(/(\')/g, '\'\'');
       console.log(text);
@@ -31,7 +31,7 @@ module.exports = {
   },
   messages: {
     // get all messages
-    get: (callback) => {
+    getMessages: (callback) => {
       const qs = 'select text, roomname from messages';
       db.query(qs, (err, results) => {
         if(err){
@@ -44,7 +44,7 @@ module.exports = {
     },
 
     // insert message into db
-    post: (message) => {
+    postMessage: (message) => {
       //console.log(message);
       const text = message.message.replace(/(\')/g, '\'\'');
       console.log(text);

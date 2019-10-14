@@ -4,12 +4,12 @@ const models = require('../models');
 
 module.exports = {
   users: {
-    get: (req, res) => {
+    getUsers: (req, res) => {
       res.sendStatus(200);
       res.end();
     },
 
-    post: (req, res) => {
+    postUser: (req, res) => {
       //console.log(req.body)
       models.users.post(req.body);
       res.sendStatus(201);
@@ -17,7 +17,7 @@ module.exports = {
     }
   },
   messages: {
-    get: (req, res) => {
+    getMessages: (req, res) => {
       models.messages.get((results) => {
         res.status(200);
         res.send(JSON.stringify(results));
@@ -25,7 +25,7 @@ module.exports = {
         res.end();
       });
     },
-    post: (req, res) => {
+    postMessage: (req, res) => {
       models.messages.post(req.body);
       res.sendStatus(201);
       res.end();

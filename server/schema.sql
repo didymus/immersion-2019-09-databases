@@ -11,7 +11,7 @@ CREATE TABLE messages (
 );
 
 CREATE TABLE messages (
-  id INT NOT AUTO_INCREMENT,
+  id INT NOT NULL AUTO_INCREMENT,
   text VARCHAR(120) NOT NULL,
   roomname VARCHAR(40) NOT NULL,
   username VARCHAR(40),

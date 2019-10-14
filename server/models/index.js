@@ -13,6 +13,7 @@ module.exports = {
           callback(results);
         }
       });
+      res.end();
     },
 
     post: (user) => {
@@ -25,6 +26,7 @@ module.exports = {
           console.log('Error: ', err);
         }
       });
+      res.end();
     },
   },
   messages: {
@@ -38,6 +40,7 @@ module.exports = {
           callback(results);
         }
       });
+      res.end();
     },
 
     // insert message into db
@@ -51,6 +54,7 @@ module.exports = {
           console.log('Error: ', err);
         }
       });
+      res.end();
     },
   },
 };

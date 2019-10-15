@@ -5,17 +5,21 @@ const models = require('../models');
 module.exports = {
   users: {
     getUsers: (req, res) => {
-      models.users.getUser((err, data) => {
-        //data = data.split(' ')
-        res.json(data);
+      models.users.getUsers((err, data) => {
+        if(err){
+          console.log('Error: ', err);
+          res.end();
+        }
+        res.writeHead(200);
+        res.end(JSON.stringify(data));
       });
       },
 
     postUser: (req, res) => {
       //console.log(req.body)
-      models.users.postUsers(req.body);
+      models.users.postUser(req.body);
       res.sendStatus(201);
-      //res.end();
+      res.end();
     }
   },
   messages: {

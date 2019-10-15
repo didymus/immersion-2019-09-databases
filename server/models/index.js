@@ -7,14 +7,15 @@ module.exports = {
     getUser: (callback) => {
       const qs = 'select text, roomname from messages';
       connection.query(qs, (err, results) => {
-        console.log(results);
+        //console.log("*************", results);
         if(err){
           console.log('Error: ', err);
         } else {
+          //debugger;
+          console.log('************' + results);
           callback(results);
         }
       });
-      //res.end();
     },
 
     postUsers: (user) => {

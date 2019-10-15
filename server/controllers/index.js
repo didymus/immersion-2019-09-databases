@@ -5,9 +5,11 @@ const models = require('../models');
 module.exports = {
   users: {
     getUsers: (req, res) => {
-      res.sendStatus(200);
-      //res.end();
-    },
+      models.users.getUser((err, data) => {
+        //data = data.split(' ')
+        res.json(data);
+      });
+      },
 
     postUser: (req, res) => {
       //console.log(req.body)

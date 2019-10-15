@@ -6,29 +6,29 @@ module.exports = {
   users: {
     getUsers: (req, res) => {
       res.sendStatus(200);
-      res.end();
+      //res.end();
     },
 
     postUser: (req, res) => {
       //console.log(req.body)
-      models.users.post(req.body);
+      models.users.postUsers(req.body);
       res.sendStatus(201);
-      res.end();
+      //res.end();
     }
   },
   messages: {
     getMessages: (req, res) => {
-      models.messages.get((results) => {
+      models.messages.getMessages((results) => {
         res.status(200);
         res.send(JSON.stringify(results));
         //console.log(results)
-        res.end();
+        //res.end();
       });
     },
     postMessage: (req, res) => {
-      models.messages.post(req.body);
+      models.messages.postMessage(req.body);
       res.sendStatus(201);
-      res.end();
+      //res.end();
     },
   },
 };

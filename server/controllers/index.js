@@ -28,13 +28,13 @@ module.exports = {
         res.status(200);
         res.send(JSON.stringify(results));
         //console.log(results)
-        //res.end();
+        res.end();
       });
     },
     postMessage: (req, res) => {
       models.messages.postMessage(req.body);
       res.sendStatus(201);
-      //res.end();
+      res.end();
     },
   },
 };

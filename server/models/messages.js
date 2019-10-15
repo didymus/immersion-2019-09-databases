@@ -1,17 +1,17 @@
-const db = require('../db');
+// const db = require('../db');
 
-// A function which produces all the messages
-const getMessages = () => {
+// // A function which produces all the messages
+// const getMessages = () => {
   
-};
+// };
 
 
-// A function which can be used to insert a message into the database
-const postMessage = () => {
+// // A function which can be used to insert a message into the database
+// const postMessage = () => {
   
-};
+// };
 
-module.exports = {
-  getMessages,
-  postMessage,
-};
+// module.exports = {
+//   getMessages,
+//   postMessage,
+// };
